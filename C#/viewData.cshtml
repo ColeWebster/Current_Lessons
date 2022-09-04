@@ -1,20 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace MyApp.Namespace
-{
-  public class ProfileModel : PageModel
-  {
-    public void OnGet()
-    {
-    }
-  }
-}
-<!-- --------------------------------- -->
 @page
 @model MyApp.Namespace.ProfileModel
 @{
@@ -32,7 +15,8 @@ namespace MyApp.Namespace
 							</div>
 							<div class="userData ml-3">
 								<h2 class="d-block" style="font-size: 1.5rem; font-weight: bold">
-                <!-- Username Here -->   
+                <!-- Username Here --> 
+                @ViewData["username"]  
                 </h2>
 							</div>
 						</div>
@@ -54,7 +38,7 @@ namespace MyApp.Namespace
 										</div>
                     <div class="col-md-8 col-6">
                         <!-- Your Name Here -->
-
+                        @ViewData["myName"]
                     </div>
 									</div>
 									<hr />
@@ -65,7 +49,7 @@ namespace MyApp.Namespace
                     </div>
                     <div class="col-md-8 col-6">
                           <!-- Your Age Here -->
-                      
+                      @ViewData["myAge"]
                     </div>
                   </div>
 									<hr />
@@ -76,7 +60,7 @@ namespace MyApp.Namespace
                       </div>
                       <div class="col-md-8 col-6">
                         <!-- Your Occupation Here -->
-
+                        @ViewData["myOccupation"]
                       </div>
                   </div>
                   <hr />
@@ -87,7 +71,7 @@ namespace MyApp.Namespace
                     </div>
                       <div class="col-md-8 col-6">
                         <!-- Current Time Here -->
-
+                        @ViewData["currentDate"]
                       </div>
                   </div>
                 <hr/>
@@ -99,3 +83,25 @@ namespace MyApp.Namespace
     </div>
   </div>
 </div>
+<!-- Profile.cshtml below -->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace MyApp.Namespace
+{
+  public class ProfileModel : PageModel
+  {
+    public void OnGet()
+    {
+      ViewData["myName"] = "Cole Webster";
+      ViewData["username"] = "CWebster";
+      ViewData["myOccupation"] = "Software Engineer";
+      ViewData["myAge"] = 34;
+      ViewData["currentDate"] = "09/04/22";
+    }
+  }
+}
