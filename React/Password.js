@@ -40,11 +40,11 @@ class Contact extends React.Component {
         <li>555.555.5555</li>
       </ul>
     );
-    
+
     return (
       <div id="authorization">
         <h1>{contact}</h1>
-        {this.state.authorized ? contactInfo : login }
+        {this.state.authorized ? contactInfo : login}
       </div>
     );
   }
