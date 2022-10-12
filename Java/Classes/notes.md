@@ -9,6 +9,7 @@
 
 <pre><code>
 public class Car {
+
     <!-- Scope of Car class starts after the curly brace -->
     public static void main(String[] args) {
         <!-- scope of main() starts after curly braces -->
@@ -24,3 +25,35 @@ public class Car {
 - Public is an access level modifier that allows other classes to interact with this class. 
 
 - For now all classes will be public
+
+## Classes: Constructors
+- In order to create an object(an instance of a class), we need a constructor method.
+
+- The constructor is defined within the class.
+
+<pre><code>
+public class Car {
+    public Car() {
+
+    }
+    public static void main(String[] args) {
+
+    }
+} 
+</code></pre>
+- In this block the constructor, Car(), shares the same name as the class. 
+
+- To create an instance, we need to call or invoke the constructo within main().
+
+- THe following example assigns a Car instance to the variable ferrari:
+
+<pre><code>
+public class Car {
+    public Car() {
+
+    }
+    public static void main(String[] args) {
+        Car ferrari = new Car();
+    }
+}
+</code></pre>
