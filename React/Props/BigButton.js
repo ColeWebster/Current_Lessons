@@ -10,16 +10,16 @@ class BigButton extends React.Component {
 
 
 // Example 1
-<BigButton>
-  I am a child of BigButton.
-</BigButton>
+// <BigButton>
+//   I am a child of BigButton.
+// </BigButton>
 
 
 // Example 2
-<BigButton>
-  <LilButton />
-</BigButton>
+// <BigButton>
+//   <LilButton />
+// </BigButton>
 
 
 // Example 3
-<BigButton />
+// <BigButton />
