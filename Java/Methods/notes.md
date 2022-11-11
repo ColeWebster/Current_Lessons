@@ -37,3 +37,18 @@ The variable message, which is declard and initalized inside of drive, cannot be
 It only exists within the scope of the drive() method.
 
 However, milesDriven, which is declared at the top of the class, can be used inside all methods in the class, since it is in the scope of the whole class.
+
+## Adding Parameters
+We saw how a method's scope prevents us from using vaiables declard in one method in another method. What if we had some information in one method that we needed to pass into another method?
+
+Similar to how we added parameters to constructors, we can customize all other methods to accept parameters. For example, in the following code, we carea a startRadio() method that accepts a Double parameter, stationNum and a String parameter called stationName:
+```
+class Car {
+    String color;
+
+    public Car(String carColor) {
+        color = carColor;
+    }
+
+    public void startRadio(double stationNum, String stationName)
+}
